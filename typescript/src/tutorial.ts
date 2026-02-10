@@ -15,15 +15,30 @@ console.log(`We love you ${awesomeName}!`);
 console.log(`${girlName} just turned ${age} today.`);
 console.log(`${awesomeName} is so funky!${soUnbelievable}`);
 
-// ## Challenge 1
-// - Create a variable of type string and try to invoke a string method on it.
-// - Create a variable of type number and try to perform a mathematical operation on it.
-// - Create a variable of type boolean and try to perform a logical operation on it.
-let bassPlayer: string = "Bootsy Collins";
-let amount: number = 35;
-amount = amount + 4;
-let isGrownAndSexy: boolean = true;
-isGrownAndSexy = !isGrownAndSexy;
+// Union and Any Type
+let tax: number | string = 10;
+tax = 100;
+tax = "$10";
 
-console.log(`${bassPlayer} is a great bass player.`);
-console.log(`Rose just turned ${amount} on Saturday. She is now officially grown and sexy. ${isGrownAndSexy}`);
+// fancy name - literal value type
+let requestStatus: "pending" | "success" | "error" = "pending";
+requestStatus = "success";
+requestStatus = "error";
+// requestStatus = 'random';
+
+// Type - "any"
+let notSure: any = 4;
+notSure = "maybe a string instead";
+notSure = false; // okay, definitely a boolean
+
+const books = ["1984", "Brave New World", "The Spook Who Sat By The Door"];
+
+let foundBook: string | undefined;
+
+for (let book of books) {
+  if (book === "1984") foundBook = book;
+  foundBook = foundBook?.toUpperCase();
+  break;
+}
+
+console.log(foundBook?.length);
