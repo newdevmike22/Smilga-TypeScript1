@@ -1,3 +1,5 @@
+/*
+
 // Type Annotations and Type Inference
 
 let awesomeName: string = "Doctor Funkenstein";
@@ -42,3 +44,28 @@ for (let book of books) {
 }
 
 console.log(foundBook?.length);
+
+// Arrays
+let prices: number[] = [150, 75, 25];
+prices.push(15);
+
+let fruit: string[] = ["apple", "orange", "watermelon"];
+fruit.push("grapes");
+
+let emptyValues: number[] = [];
+
+let names = ["Joe", "Phil", 0];
+
+let array: (string | boolean)[] = ["fish", true, "turkey", false];
+
+// Objects
+let car: { brand: string; year: number } = { brand: "Toyota", year: 2025 };
+
+let car1: { brand: string; year: number } = { brand: "Ford", year: 2022 };
+
+let book = { title: "book", cost: 20 };
+let pen = { title: "pen", cost: 10 };
+let notebook = { title: "notebook" };
+
+let items: { readonly title: string; cost?: number }[] = [book, pen, notebook];
+*/
